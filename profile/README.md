@@ -10,6 +10,19 @@ It provides a unified environment for **genomics, multi-omics, AI-driven biologi
 
 ---
 
+## 📊 By the Numbers
+
+| | |
+|---|---|
+| **2M+** lines of production code | **25,000+** tests · 90% coverage |
+| **28+** microservices | **225+** bioinformatics/ML plugins |
+| **1,025** container images (225 Docker + 800 ARM64 SIF) | **600+** workflow bundles (Nextflow, WDL, CWL, Snakemake) |
+| **36M** PubMed abstracts indexed | **11,000+** execution, cloud, HPC, and orchestration tools |
+
+📊 **[Live platform metrics & health →](https://control.omnibioai.org)** — real-time architecture, codebase stats, and service status, not just claims.
+
+---
+
 ## 🌐 Platform Overview
 
 OmniBioAI connects biological data, computational workflows, AI models, and scientific knowledge into a unified ecosystem.
@@ -74,7 +87,7 @@ Execute bioinformatics pipelines across multiple environments:
 * Cloud batch systems
 * Containerized compute environments
 
-Supported workflow concepts:
+**600+ versioned workflow bundles** across:
 
 * Nextflow
 * WDL
@@ -116,55 +129,71 @@ OmniBioAI is built as a modular ecosystem of services:
 ## 🚀 Core Platform
 
 | Repository                   | Description                                             |
-| ---------------------------- | ------------------------------------------------------- |
-| **omnibioai-ecosystem**      | Platform orchestration and service integration          |
-| **omnibioai-control-center** | Platform monitoring and operational dashboard           |
-| **omnibioai-workbench**      | Plugin execution environment                            |
-| **omnibioai-launcher**       | Opens registry objects in Jupyter, VS Code, and RStudio |
+| ----------------------------- | -------------------------------------------------------- |
+| **omnibioai**                 | Main Django workbench + 80+ plugins                       |
+| **omnibioai-studio**          | Electron desktop app — orchestrates the full stack        |
+| **omnibioai-ecosystem**       | Platform orchestration and service integration            |
+| **omnibioai-control-center**  | Platform monitoring and operational dashboard              |
+| **omnibioai-workbench**       | Plugin execution environment                               |
+| **omnibioai-launcher**        | Opens registry objects in Jupyter, VS Code, and RStudio    |
+| **omnibioai-sdk**             | Python SDK client                                          |
 
 ---
 
 ## ⚙️ Workflow & Execution
 
 | Repository                     | Description                                                |
-| ------------------------------ | ---------------------------------------------------------- |
-| **omnibioai-tes**              | Tool Execution Service for local, HPC, and cloud execution |
-| **omnibioai-tool-runtime**     | Cloud-agnostic container execution runtime                 |
-| **omnibioai-tool-images**      | Bioinformatics and ML container images                     |
-| **omnibioai-workflow-bundles** | Versioned reproducible workflow packages                   |
+| -------------------------------| ------------------------------------------------------------|
+| **omnibioai-tes**              | Tool Execution Service for local, HPC, and cloud execution   |
+| **omnibioai-toolserver**       | FastAPI tool API                                              |
+| **omnibioai-tool-runtime**     | Cloud-agnostic container execution runtime                    |
+| **omnibioai-tool-images**      | Bioinformatics and ML container images                        |
+| **omnibioai-workflow-bundles** | Versioned reproducible workflow packages                      |
 
 ---
 
 ## 🤖 AI & Knowledge Systems
 
 | Repository                   | Description                                      |
-| ---------------------------- | ------------------------------------------------ |
-| **omnibioai-rag**            | Biomedical retrieval augmented generation system |
-| **omnibioai-dev-hub**        | AI intelligence hub with semantic retrieval      |
-| **omnibioai-model-registry** | ML model lifecycle and provenance management     |
+| ------------------------------| --------------------------------------------------|
+| **omnibioai-rag**            | Biomedical retrieval augmented generation system   |
+| **omnibioai-dev-hub**        | AI intelligence hub with semantic retrieval        |
+| **omnibioai-model-registry** | ML model lifecycle and provenance management       |
 
 ---
 
 ## 🔐 Security & Governance
 
-| Repository                   | Description                          |
-| ---------------------------- | ------------------------------------ |
-| **omnibioai-auth**           | Authentication and identity services |
-| **omnibioai-api-gateway**    | Zero-trust API gateway               |
-| **omnibioai-policy-engine**  | RBAC/ABAC policy enforcement         |
-| **omnibioai-security-audit** | Security events and observability    |
-| **omnibioai-security-sdk**   | Shared security framework            |
+| Repository                     | Description                          |
+| --------------------------------| ------------------------------------- |
+| **omnibioai-auth**              | Authentication and identity services  |
+| **omnibioai-api-gateway**       | Zero-trust API gateway                |
+| **omnibioai-policy-engine**     | RBAC/ABAC policy enforcement          |
+| **omnibioai-hpc-policy-engine** | GPU/CPU quota governance              |
+| **omnibioai-security-audit**    | Security events and observability     |
+| **omnibioai-security-sdk**      | Shared security framework             |
+| **omnibioai-iam-client**        | Identity and access management client |
 
 ---
 
 ## 🧪 Research Infrastructure
 
 | Repository           | Description                               |
-| -------------------- | ----------------------------------------- |
-| **omnibioai-lims**   | Biological sample and metadata management |
-| **omnibioai-data**   | Reference and example datasets            |
-| **omnibioai-docs**   | Technical documentation                   |
-| **omnibioai-videos** | Tutorials and onboarding resources        |
+| ---------------------| -------------------------------------------|
+| **omnibioai-lims**   | Biological sample and metadata management  |
+| **omnibioai-data**   | Reference and example datasets              |
+| **omnibioai-docs**   | Technical documentation                      |
+| **omnibioai-videos** | Tutorials and onboarding resources           |
+
+---
+
+## 🎨 Design & Frontend
+
+| Repository                    | Description                       |
+| -------------------------------| ----------------------------------|
+| **omnibioai-design-tokens**   | Shared design tokens and theme     |
+| **omnibioai-ui**              | Shared UI component library        |
+| **omnibioai-landing**         | Public-facing landing page         |
 
 ---
 
@@ -230,19 +259,29 @@ OmniBioAI follows:
 
 # 🚀 Getting Started
 
-Explore the platform:
-
-🌐 Website
+🌐 **Website**
 https://omnibioai.org
 
-🐙 GitHub Organization
+📊 **Live Platform Stats**
+https://control.omnibioai.org
+
+🐙 **GitHub Organization**
 https://github.com/OmniBioAI
 
-📚 Documentation
+📦 **Container Registry (1,025 images)**
+https://github.com/orgs/OmniBioAI/packages
+
+📚 **Documentation**
 See the `omnibioai-docs` repository
 
-🎥 Tutorials
+🎥 **Tutorials**
 See the `omnibioai-videos` repository
+
+💬 **Discord**
+https://discord.gg/Hu6vgfAFn
+
+🐦 **Twitter**
+https://twitter.com/OmniBioAI
 
 ---
 
@@ -250,8 +289,11 @@ See the `omnibioai-videos` repository
 
 Created by **Manish Kumar**
 
-🧬 Senior Computational Scientist
-🤖 AI-Native Bioinformatics Platform Engineer
+🧬 Senior Computational Scientist | 🤖 AI-Native Bioinformatics Engineer
+
+18 years across 🇺🇸 USA, 🇶🇦 Qatar, 🇲🇾 Malaysia, 🇸🇦 Saudi Arabia, and 🇮🇳 India, building genomics and precision medicine infrastructure for research and clinical environments.
+
+🏥 Currently at the **University of Kansas Medical Center** — genomics, single-cell, exome & proteomics pipelines for rare disease and translational research.
 
 Building intelligent computational systems at the intersection of:
 
