@@ -98,7 +98,7 @@ Execute bioinformatics pipelines across multiple environments:
 
 # 🏗️ Platform Architecture
 
-![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/architecture.png)
+![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/omnibioai-architecture.png)
 
 *Unified AI-Native Bioinformatics Platform — 9-layer architecture from client access through security, observability, and development environments.*
 
