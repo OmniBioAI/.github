@@ -98,29 +98,9 @@ Execute bioinformatics pipelines across multiple environments:
 
 # 🏗️ Platform Architecture
 
-OmniBioAI is built as a modular ecosystem of services:
+![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/architecture.png)
 
-```
-                    OmniBioAI Studio
-
-                         │
-
-              Unified Control Plane
-
-                         │
-
- ┌────────────┬────────────┬────────────┐
- │ Workflow   │ AI Services│ Data Layer │
- │ Engine     │ RAG/LLM    │ Registry   │
- └────────────┴────────────┴────────────┘
-
-                         │
-
- ┌────────────┬────────────┬────────────┐
- │ Local      │ HPC        │ Cloud      │
- │ Execution  │ Slurm      │ AWS/Azure  │
- └────────────┴────────────┴────────────┘
-```
+*Unified AI-Native Bioinformatics Platform — 9-layer architecture from client access through security, observability, and development environments.*
 
 ---
 
