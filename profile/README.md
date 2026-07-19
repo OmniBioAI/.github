@@ -17,7 +17,7 @@ It provides a unified environment for **genomics, multi-omics, AI-driven biologi
 | **2M+** lines of production code | **25,000+** tests · 90% coverage |
 | **28+** microservices | **225+** bioinformatics/ML plugins |
 | **1,025** container images (225 Docker + 800 ARM64 SIF) | **600+** workflow bundles (Nextflow, WDL, CWL, Snakemake) |
-| **36M** PubMed abstracts indexed | **11,000+** execution, cloud, HPC, and orchestration tools |
+| **36M** PubMed abstracts indexed | **11,500+** execution, cloud, HPC, and orchestration tools |
 
 📊 **[Live platform metrics & health →](https://control.omnibioai.org)** — real-time architecture, codebase stats, and service status, not just claims.
 
