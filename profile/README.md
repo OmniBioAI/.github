@@ -14,10 +14,10 @@ It provides a unified environment for **genomics, multi-omics, AI-driven biologi
 
 | | |
 |---|---|
-| **2M+** lines of production code | **25,000+** tests · 90% coverage |
-| **28+** microservices | **225+** bioinformatics/ML plugins |
-| **1,025** container images (225 Docker + 800 ARM64 SIF) | **600+** workflow bundles (Nextflow, WDL, CWL, Snakemake) |
-| **36M** PubMed abstracts indexed | **11,500+** execution, cloud, HPC, and orchestration tools |
+| **3M+** lines of code | **4,000+** test files across the ecosystem |
+| **33** repositories | **231** bioinformatics/ML plugins |
+| **1,233** container images on GHCR (**1,000** ARM64 SIF + Docker) | **616** workflow bundles (Nextflow, WDL, CWL, Snakemake) |
+| **36M** PubMed abstracts indexed | **12,110** execution, cloud, HPC, and orchestration tools |
 
 📊 **[Live platform metrics & health →](https://control.omnibioai.org)** — real-time architecture, codebase stats, and service status, not just claims.
 
@@ -87,7 +87,7 @@ Execute bioinformatics pipelines across multiple environments:
 * Cloud batch systems
 * Containerized compute environments
 
-**600+ versioned workflow bundles** across:
+**616 versioned workflow bundles** across:
 
 * Nextflow
 * WDL
@@ -110,13 +110,13 @@ Execute bioinformatics pipelines across multiple environments:
 
 | Repository                   | Description                                             |
 | ----------------------------- | -------------------------------------------------------- |
-| **omnibioai**                 | Main Django workbench + 80+ plugins                       |
+| **omnibioai**                 | Main Django workbench + 231 plugins                        |
 | **omnibioai-studio**          | Electron desktop app — orchestrates the full stack        |
-| **omnibioai-ecosystem**       | Platform orchestration and service integration            |
 | **omnibioai-control-center**  | Platform monitoring and operational dashboard              |
 | **omnibioai-workbench**       | Plugin execution environment                               |
 | **omnibioai-launcher**        | Opens registry objects in Jupyter, VS Code, and RStudio    |
 | **omnibioai-sdk**             | Python SDK client                                          |
+| **omnibioai-utils**           | Ecosystem automation — stack lifecycle, CI/CD, coverage reporting |
 
 ---
 
@@ -153,6 +153,17 @@ Execute bioinformatics pipelines across multiple environments:
 | **omnibioai-security-audit**    | Security events and observability     |
 | **omnibioai-security-sdk**      | Shared security framework             |
 | **omnibioai-iam-client**        | Identity and access management client |
+| **omnibioai-usage-client**      | Usage-metering event-emission SDK     |
+
+---
+
+## 💰 Billing & Operations
+
+| Repository                | Description                                              |
+| ---------------------------| -----------------------------------------------------------|
+| **omnibioai-billing**      | Subscription billing, invoicing, and entitlement catalog  |
+| **omnibioai-db-init**      | MySQL database initialization scripts                     |
+| **omnibioai-dev-docker**   | GPU/DGX development environment image (CUDA, PyTorch)     |
 
 ---
 
@@ -248,8 +259,11 @@ https://control.omnibioai.org
 🐙 **GitHub Organization**
 https://github.com/OmniBioAI
 
-📦 **Container Registry (1,025 images)**
+📦 **Container Registry (1,233 images)**
 https://github.com/orgs/OmniBioAI/packages
+
+🤗 **Hugging Face**
+https://huggingface.co/omnibioai
 
 📚 **Documentation**
 See the `omnibioai-docs` repository
