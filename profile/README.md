@@ -14,7 +14,7 @@ It provides a unified environment for **genomics, multi-omics, AI-driven biologi
 
 | | |
 |---|---|
-| **3M+** lines of code | **4,000+** test files across the ecosystem |
+| **3M+** lines of code | **30,000+** tests across 1,300+ test files |
 | **33** repositories | **231** bioinformatics/ML plugins |
 | **1,233** container images on GHCR (**1,000** ARM64 SIF + Docker) | **616** workflow bundles (Nextflow, WDL, CWL, Snakemake) |
 | **36M** PubMed abstracts indexed | **12,110** execution, cloud, HPC, and orchestration tools |
