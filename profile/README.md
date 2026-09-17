@@ -28,8 +28,8 @@ and research teams developing reproducible biomedical AI systems.
 | Microservices / platform services | **28+** |
 | Bioinformatics & ML plugins | **500+** |
 | Workflow bundles | **1000+** |
-| Execution / HPC / cloud tools | **[CURRENT VERIFIED COUNT]** |
-| Container artifacts | **[CURRENT VERIFIED COUNT]** |
+| Execution / HPC / cloud tools | **12000+** |
+| Container artifacts | **1250+** |
 | PubMed corpus | **39M+ abstracts** |
 | Biomedical vector index | **75M+ vectors** |
 
