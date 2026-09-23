@@ -23,14 +23,14 @@ and research teams developing reproducible biomedical AI systems.
 | Platform | Scale |
 |---|---:|
 | Source repositories | **33** |
-| Codebase | **4.4M+** |
+| Codebase | **5.0M+** |
 | Automated tests | **65000+** |
 | Microservices / platform services | **28+** |
 | Bioinformatics & ML plugins | **500+** |
 | Workflow bundles | **1000+** |
 | Execution / HPC / cloud tools | **12000+** |
 | Container artifacts | **1250+** |
-| PubMed corpus | **39M+ abstracts** |
+| PubMed corpus | **28M+ (unique) abstracts** |
 | Biomedical vector index | **75M+ vectors** |
 
 📊 **Live architecture, service health, and platform metrics:**  
