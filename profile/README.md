@@ -26,7 +26,7 @@ and research teams developing reproducible biomedical AI systems.
 | Codebase | **5.0M+** |
 | Automated tests | **65000+** |
 | Microservices / platform services | **28+** |
-| Bioinformatics & ML plugins | **500+** |
+| Bioinformatics & AI/ML plugins | **500+** |
 | Workflow bundles | **1000+** |
 | Execution / HPC / cloud tools | **12000+** |
 | Container artifacts | **1250+** |
