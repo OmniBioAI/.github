@@ -23,7 +23,7 @@ and research teams developing reproducible biomedical AI systems.
 | Platform | Scale |
 |---|---:|
 | Source repositories | **33** |
-| Codebase | **5.0M+** |
+| Codebase | **5.2M+** |
 | Automated tests | **65000+** |
 | Microservices / platform services | **28+** |
 | Bioinformatics & AI/ML plugins | **500+** |
