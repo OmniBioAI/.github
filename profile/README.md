@@ -458,7 +458,7 @@ See `omnibioai-videos`
 
 Senior Computational Scientist · AI-Native Bioinformatics Engineer
 
-18 years of experience spanning bioinformatics, multi-omics,
+19 years of experience spanning bioinformatics, multi-omics,
 computational biology, HPC, cloud computing, and scientific AI across
 the United States, Qatar, Malaysia, Saudi Arabia, and India.
 
