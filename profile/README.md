@@ -68,45 +68,8 @@ Live architecture, service health, and platform metrics:
 
 OmniBioAI connects the major layers required for modern computational biology:
 
-```text
-                     Scientific Question
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │   Scientific AI Layer  │
-                  │ Agents · RAG · Models  │
-                  └───────────┬────────────┘
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │ Bioinformatics Layer   │
-                  │ Genomics · Multi-Omics │
-                  └───────────┬────────────┘
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │ Workflow Orchestration │
-                  │ NF · WDL · CWL · Snake │
-                  └───────────┬────────────┘
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │ Execution Fabric       │
-                  │ Local · HPC · Cloud    │
-                  └───────────┬────────────┘
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │ Provenance & Evidence  │
-                  │ Lineage · Runs · Audit │
-                  └───────────┬────────────┘
-                              │
-                              ▼
-                  ┌────────────────────────┐
-                  │ Security & Governance  │
-                  │ IAM · Policy · Audit   │
-                  └────────────────────────┘
-```
+![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/omnibioai_flow.png)
+
 
 ---
 
