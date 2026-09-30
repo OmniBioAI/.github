@@ -131,7 +131,7 @@ knowledge into a local retrieval and reasoning layer.
 
 Current infrastructure includes:
 
-* **39M+ PubMed abstracts**
+* **28M+ PubMed abstracts**
 * **75M+ biomedical vectors**
 * Domain-oriented biomedical indexes
 * Semantic retrieval
