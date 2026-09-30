@@ -68,7 +68,7 @@ Live architecture, service health, and platform metrics:
 
 OmniBioAI connects the major layers required for modern computational biology:
 
-![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/omnibioai_Flow.png)
+![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Flow.png)
 
 
 ---
