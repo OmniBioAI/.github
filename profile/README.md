@@ -178,7 +178,7 @@ This makes computational results easier to reproduce, inspect, trace, and audit.
 
 # 🏗️ Platform Architecture
 
-![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/Architecture.png)
+![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/Architecture_Diagram.png)
 
 *AI-native computational biology architecture spanning scientific AI, bioinformatics workflows, execution infrastructure, provenance, security, governance, and observability.*
 
