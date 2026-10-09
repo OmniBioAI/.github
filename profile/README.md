@@ -46,7 +46,7 @@ https://github.com/OmniBioAI/omnibioai-videos
 | Platform | Scale |
 |---|---:|
 | Source repositories | **33** |
-| Codebase | **3.45M+** |
+| Codebase | **3.9M+** |
 | Automated tests | **65,000+** |
 | Microservices / platform services | **28+** |
 | Bioinformatics & AI/ML plugins | **500+** |
