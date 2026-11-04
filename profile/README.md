@@ -64,12 +64,88 @@ Live architecture, service health, and platform metrics:
 
 ---
 
+## 🖥️ Hardware & Reference Infrastructure
+
+OmniBioAI is developed and operated using a dedicated, self-hosted computing environment combining local AI acceleration, high-capacity storage, and a developer workstation.
+
+The infrastructure supports software engineering, scientific computing, local AI workloads, biomedical knowledge retrieval, model experimentation, and platform operations.
+
+### Compute Infrastructure
+
+| Hardware | Configuration | Primary Responsibilities |
+|---|---|---|
+| **NVIDIA DGX Spark** | GB10 Grace Blackwell · 128 GB unified memory · 4 TB NVMe SSD | Local LLM inference, embeddings, biomedical RAG, AI agents, model experimentation, and scientific AI workloads |
+| **MacBook Pro** | Apple M4 Pro · 36 GB unified memory · 1 TB SSD | Platform development, Git, IDE, software engineering, documentation, administration, and remote infrastructure management |
+
+### Centralized Storage Infrastructure
+
+**UGREEN NASync — 4-bay NAS**
+
+| Storage | Capacity | Designated Role |
+|---|---:|---|
+| HDD 1 | 32 TB | Primary data storage |
+| HDD 2 | 32 TB | Primary data storage |
+| HDD 3 | 26 TB | Dedicated backup storage |
+| HDD 4 | 24 TB | Long-term archive storage |
+| SSD | 4 TB | Additional SSD storage |
+
+**Storage capacity overview**
+
+| Infrastructure | Nominal Capacity |
+|---|---:|
+| NAS HDD storage | **114 TB** |
+| NAS SSD storage | **4 TB** |
+| DGX Spark internal storage | **4 TB** |
+| MacBook Pro internal storage | **1 TB** |
+| **Total nominal storage** | **123 TB** |
+
+*Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. Backup and archive drives are located within the same NAS and should not be interpreted as independent off-site disaster recovery.*
+
+### Infrastructure Architecture
+
+The reference environment follows a distributed computing model:
+
+```text
+                  OmniBioAI Platform
+                         |
+          +--------------+--------------+
+          |              |              |
+      Development     AI Compute     Data Storage
+          |              |              |
+     MacBook Pro     NVIDIA DGX     UGREEN NASync
+      M4 Pro          Spark          4-Bay NAS
+          |              |              |
+     Development     Local LLMs     Biomedical Data
+     Git / IDE       Embeddings     Research Datasets
+     Administration  RAG / Agents   References / Archive
+          |              |              |
+          +--------------+--------------+
+                         |
+                OmniBioAI Services
+                         |
+          +--------------+--------------+
+          |              |              |
+       Local         HPC / Slurm     Cloud / Kubernetes
+      Execution        Execution        Execution
+```
+
+### Infrastructure Responsibilities
+
+- **Local AI computing:** Hardware-accelerated inference, embeddings, retrieval, and scientific AI experimentation.
+- **Scientific data management:** Centralized storage for biomedical datasets, reference resources, and computational artifacts.
+- **Software engineering:** Dedicated development and administration workstation.
+- **Reproducible execution:** Support for containerized and workflow-driven computational environments.
+- **Hybrid computing:** Integration with external HPC clusters and cloud infrastructure when additional resources are required.
+
+> This is the reference development infrastructure for OmniBioAI, not a mandatory hardware configuration. The platform is designed to support heterogeneous computing environments, including institutional HPC systems, cloud infrastructure, and local workstations.
+
+---
+
 # 🌐 From Scientific Question to Evidence
 
 OmniBioAI connects the major layers required for modern computational biology:
 
 ![OmniBioAI Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Flow.png)
-
 
 ---
 
