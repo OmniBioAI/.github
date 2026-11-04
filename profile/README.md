@@ -103,6 +103,8 @@ The infrastructure supports software engineering, scientific computing, local AI
 
 ### Infrastructure Architecture
 
+![OmniBioAI Infrastructure Architecture](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI Hardware Infrastructure Overview.png)
+
 The reference environment follows a distributed computing model:
 
 ```text
