@@ -92,7 +92,7 @@ This infrastructure supports software engineering, scientific computing, local A
 
 ## Hardware Infrastructure Architecture
 
-![OmniBioAI Hardware & Reference Infrastructure](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Hardware_Infrastructure_Overview.png)
+![OmniBioAI Hardware & Reference Infrastructure](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Hardware_Infrastructure_Overview_v2.png)
 
 ### Infrastructure Responsibilities
 
