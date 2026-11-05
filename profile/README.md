@@ -400,7 +400,7 @@ A security or operational control is not considered operational simply because i
 
 **Senior Computational Scientist · AI-Native Bioinformatics Engineer**
 
-19 years of experience spanning bioinformatics, multi-omics, computational biology, HPC, cloud computing, software engineering, and scientific AI across the United States, Qatar, Malaysia, Saudi Arabia, and India.
+20 years of experience spanning bioinformatics, multi-omics, computational biology, HPC, cloud computing, software engineering, and scientific AI across the United States, Qatar, Malaysia, Saudi Arabia, and India.
 
 **Creator and lead engineer of OmniBioAI.**
 
