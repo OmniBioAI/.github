@@ -89,6 +89,16 @@ This infrastructure supports software engineering, scientific computing, local A
 | MacBook Pro internal storage | 1 TB |
 | **Total nominal infrastructure storage** | **127 TB** |
 
+### Storage Architecture & Data Lifecycle
+
+The NAS separates storage responsibilities into distinct tiers:
+
+- **Performance tier:** NVMe RAID 0 for live scientific data, PubMed corpus, and FAISS vector indexes.
+- **Primary data tier:** HDD pool for tenant-isolated platform data.
+- **Backup tier:** Dedicated 26 TB HDD for nightly backups and snapshots.
+- **Archive tier:** Dedicated 24 TB HDD for long-term archival, mirrored to the HDD pool.
+
+This design separates active computational workloads from tenant storage, backup operations, and archival data management.
 *Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. The 8 TB NVMe configuration uses RAID 0 for live data. Backup and archive drives reside within the same NAS and should not be interpreted as independent off-site disaster recovery.*
 
 ## Hardware Infrastructure Architecture
@@ -98,7 +108,7 @@ This infrastructure supports software engineering, scientific computing, local A
 ### Infrastructure Responsibilities
 
 - **Local AI computing:** Hardware-accelerated inference, embeddings, retrieval, and scientific AI experimentation.
-- **Scientific data management:** Centralized storage for biomedical datasets, reference resources, and computational artifacts.
+- **Scientific data management:** Centralized NAS infrastructure with NVMe-backed live biomedical data, PubMed and FAISS indexes, tenant data storage, dedicated backup, and long-term archival storage.
 - **Software engineering:** Dedicated development and administration workstation.
 - **Reproducible execution:** Support for containerized and workflow-driven computational environments.
 - **Hybrid computing:** Integration with external HPC clusters and cloud infrastructure when additional resources are required.
