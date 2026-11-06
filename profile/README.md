@@ -68,27 +68,28 @@ This infrastructure supports software engineering, scientific computing, local A
 
 ## Centralized Storage Infrastructure
 
-**UGREEN NASync — 4-bay NAS**
+**UGREEN NASync DXP4800 Plus – 4-bay NAS + 2× M.2 NVMe**
 
 | Storage | Capacity | Designated Role |
 |---|---:|---|
-| HDD 1 | 32 TB | Primary data storage |
-| HDD 2 | 32 TB | Primary data storage |
-| HDD 3 | 26 TB | Dedicated backup storage |
-| HDD 4 | 24 TB | Long-term archive storage |
-| SSD | 4 TB | Additional SSD storage |
+| NVMe SSD 1 | 4 TB | Live data, PubMed corpus, and FAISS indexes |
+| NVMe SSD 2 | 4 TB | Live data, PubMed corpus, and FAISS indexes |
+| HDD Pool (2 drives) | 64 TB | Tenant data |
+| HDD 3 | 26 TB | Backup for SSD data and tenant data; nightly backups and snapshots |
+| HDD 4 | 24 TB | Long-term archive, mirrored to HDD pool |
 
 ### Storage Capacity Overview
 
 | Infrastructure | Nominal Capacity |
 |---|---:|
 | NAS HDD storage | **114 TB** |
-| NAS SSD storage | **4 TB** |
-| DGX Spark internal storage | **4 TB** |
-| MacBook Pro internal storage | **1 TB** |
-| **Total nominal storage** | **123 TB** |
+| NAS NVMe SSD storage | **8 TB** |
+| **Total NAS capacity** | **122 TB** |
+| DGX Spark internal storage | 4 TB |
+| MacBook Pro internal storage | 1 TB |
+| **Total nominal infrastructure storage** | **127 TB** |
 
-*Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. Backup and archive drives are located within the same NAS and should not be interpreted as independent off-site disaster recovery.*
+*Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. The 8 TB NVMe configuration uses RAID 0 for live data. Backup and archive drives reside within the same NAS and should not be interpreted as independent off-site disaster recovery.*
 
 ## Hardware Infrastructure Architecture
 
