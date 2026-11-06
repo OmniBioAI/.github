@@ -69,4 +69,4 @@ A repository's own copy of any of these files always takes precedence over the d
 
 ---
 
-Maintained by the OmniBioAI team.
+Maintained by the Manish Kumar.
