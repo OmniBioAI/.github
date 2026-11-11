@@ -55,7 +55,7 @@ Live architecture, service health, and platform metrics:
 
 # 🖥️ Hardware & Reference Infrastructure
 
-OmniBioAI is developed and operated using a dedicated, self-hosted computing environment combining local AI acceleration, centralized storage, and a developer workstation.
+OmniBioAI is developed and operated on a dedicated, self-hosted computing environment combining local AI acceleration, centralized storage, and a developer workstation.
 
 This infrastructure supports software engineering, scientific computing, local AI workloads, biomedical knowledge retrieval, model experimentation, and platform operations.
 
@@ -63,20 +63,21 @@ This infrastructure supports software engineering, scientific computing, local A
 
 | Hardware | Configuration | Primary Responsibilities |
 |---|---|---|
-| **NVIDIA DGX Spark** | GB10 Grace Blackwell · 128 GB unified memory · 4 TB NVMe SSD | Local LLM inference, embeddings, biomedical RAG, AI agents, model experimentation, and scientific AI workloads |
+| **NVIDIA DGX Spark** | GB10 Grace Blackwell · 128 GB unified memory · 4 TB NVMe SSD | Local LLM inference, embeddings, biomedical RAG, latency-sensitive vector search, AI agents, and scientific AI workloads |
 | **MacBook Pro** | Apple M4 Pro · 36 GB unified memory · 1 TB SSD | Platform development, Git, IDE, software engineering, documentation, administration, and remote infrastructure management |
 
 ## Centralized Storage Infrastructure
 
 **UGREEN NASync DXP4800 Plus – 4-bay NAS + 2× M.2 NVMe**
 
+> Target storage configuration — rollout in progress (November 2026).
+
 | Storage | Capacity | Designated Role |
 |---|---:|---|
-| NVMe SSD 1 | 4 TB | Live data, PubMed corpus, and FAISS indexes |
-| NVMe SSD 2 | 4 TB | Live data, PubMed corpus, and FAISS indexes |
-| HDD Pool (2 drives) | 64 TB | Tenant data |
-| HDD 3 | 26 TB | Backup for SSD data and tenant data; nightly backups and snapshots |
-| HDD 4 | 24 TB | Long-term archive, mirrored to HDD pool |
+| NVMe SSD pool (2 × 4 TB) | 8 TB | Reference genomes, PubMed corpus and vector indexes, sample datasets, container images, and models |
+| HDD pool (2 × 32 TB) | 64 TB | Tenant-isolated user data and platform working data |
+| HDD (26 TB) | 26 TB | Nightly, versioned backups of the NVMe and HDD pools |
+| HDD (24 TB) | 24 TB | Long-term archive and a second, independent versioned backup copy |
 
 ### Storage Capacity Overview
 
@@ -93,13 +94,14 @@ This infrastructure supports software engineering, scientific computing, local A
 
 The NAS separates storage responsibilities into distinct tiers:
 
-- **Performance tier:** NVMe RAID 0 for live scientific data, PubMed corpus, and FAISS vector indexes.
-- **Primary data tier:** HDD pool for tenant-isolated platform data.
-- **Backup tier:** Dedicated 26 TB HDD for nightly backups and snapshots.
-- **Archive tier:** Dedicated 24 TB HDD for long-term archival, mirrored to the HDD pool.
+- **Performance tier:** NVMe pool for reference genomes, the PubMed corpus, vector indexes, sample datasets, container images, and models. Latency-sensitive vector indexes are served from local NVMe on the compute node.
+- **Primary data tier:** HDD pool for tenant-isolated user data and platform working data.
+- **Backup tier:** dedicated 26 TB HDD with nightly, versioned, encrypted backups of both pools.
+- **Archive tier:** dedicated 24 TB HDD holding long-term archives and a second, independent versioned backup copy.
 
 This design separates active computational workloads from tenant storage, backup operations, and archival data management.
-*Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. The 8 TB NVMe configuration uses RAID 0 for live data. Backup and archive drives reside within the same NAS and should not be interpreted as independent off-site disaster recovery.*
+
+*Capacities are manufacturer-rated nominal capacities. Actual usable capacity depends on filesystem, RAID configuration, formatting, and storage allocation. The NVMe and HDD pools are striped for capacity and performance; data protection is provided by the separate backup and archive tiers. Backup and archive drives reside within the same NAS and should not be interpreted as independent off-site disaster recovery.*
 
 ## Hardware Infrastructure Architecture
 
@@ -108,7 +110,7 @@ This design separates active computational workloads from tenant storage, backup
 ### Infrastructure Responsibilities
 
 - **Local AI computing:** Hardware-accelerated inference, embeddings, retrieval, and scientific AI experimentation.
-- **Scientific data management:** Centralized NAS infrastructure with NVMe-backed live biomedical data, PubMed and FAISS indexes, tenant data storage, dedicated backup, and long-term archival storage.
+- **Scientific data management:** Centralized NAS infrastructure with NVMe-backed reference data and indexes, tenant-isolated data storage, dedicated backup, and long-term archival storage.
 - **Software engineering:** Dedicated development and administration workstation.
 - **Reproducible execution:** Support for containerized and workflow-driven computational environments.
 - **Hybrid computing:** Integration with external HPC clusters and cloud infrastructure when additional resources are required.
@@ -339,6 +341,8 @@ OmniBioAI includes **HIPAA-aligned technical safeguards and evidence tracking** 
 These include:
 
 **least-privilege access · audit logging · retention controls · integrity verification · backup and recovery · security monitoring · evidence-backed control tracking**
+
+> **Verification status (November 2026):** durable audit-event persistence and automated, versioned backups are being operationally verified as part of the current infrastructure rollout.
 
 OmniBioAI does **not** describe these controls as HIPAA certification.
 
