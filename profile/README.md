@@ -42,7 +42,7 @@ Built for computational scientists, bioinformatics engineers, AI engineers, and 
 | Workflow bundles | **1,000+** |
 | Execution / HPC / cloud tools | **12,000+** |
 | Container artifacts | **1,500+** |
-| PubMed corpus | **28M+ unique abstracts** |
+| PubMed corpus | **29M+ unique abstracts** |
 | Biomedical vector index | **75M+ vectors** |
 
 > Public counts distinguish verified or usable platform resources from registry entries where appropriate.
@@ -70,25 +70,23 @@ This infrastructure supports software engineering, scientific computing, local A
 
 **UGREEN NASync DXP4800 Plus – 4-bay NAS + 2× M.2 NVMe**
 
-> Target storage configuration — rollout in progress (November 2026).
-
 | Storage | Capacity | Designated Role |
 |---|---:|---|
 | NVMe SSD pool (2 × 4 TB) | 8 TB | Reference genomes, PubMed corpus and vector indexes, sample datasets, container images, and models |
 | HDD pool (2 × 32 TB) | 64 TB | Tenant-isolated user data and platform working data |
-| HDD (26 TB) | 26 TB | Nightly, versioned backups of the NVMe and HDD pools |
-| HDD (24 TB) | 24 TB | Long-term archive and a second, independent versioned backup copy |
+| Backup HDD (32 TB) | 32 TB | Nightly, encrypted, versioned backups of the NVMe and HDD pools |
+| Archive HDD (32 TB) | 32 TB | Long-term archive and a second, independent versioned backup copy |
 
 ### Storage Capacity Overview
 
 | Infrastructure | Nominal Capacity |
 |---|---:|
-| NAS HDD storage | **114 TB** |
-| NAS NVMe SSD storage | **8 TB** |
-| **Total NAS capacity** | **122 TB** |
+| NAS HDD storage (4 × 32 TB) | **128 TB** |
+| NAS NVMe SSD storage (2 × 4 TB) | **8 TB** |
+| **Total NAS capacity** | **136 TB** |
 | DGX Spark internal storage | 4 TB |
 | MacBook Pro internal storage | 1 TB |
-| **Total nominal infrastructure storage** | **127 TB** |
+| **Total nominal infrastructure storage** | **141 TB** |
 
 ### Storage Architecture & Data Lifecycle
 
@@ -96,8 +94,8 @@ The NAS separates storage responsibilities into distinct tiers:
 
 - **Performance tier:** NVMe pool for reference genomes, the PubMed corpus, vector indexes, sample datasets, container images, and models. Latency-sensitive vector indexes are served from local NVMe on the compute node.
 - **Primary data tier:** HDD pool for tenant-isolated user data and platform working data.
-- **Backup tier:** dedicated 26 TB HDD with nightly, versioned, encrypted backups of both pools.
-- **Archive tier:** dedicated 24 TB HDD holding long-term archives and a second, independent versioned backup copy.
+- **Backup tier:** dedicated 32 TB HDD with nightly, deduplicated, encrypted, versioned backups of both pools, verified by regular integrity checks and test restores.
+- **Archive tier:** dedicated 32 TB HDD holding long-term archives and a second, independent versioned backup copy.
 
 This design separates active computational workloads from tenant storage, backup operations, and archival data management.
 
@@ -342,7 +340,7 @@ These include:
 
 **least-privilege access · audit logging · retention controls · integrity verification · backup and recovery · security monitoring · evidence-backed control tracking**
 
-> **Verification status (November 2026):** durable audit-event persistence and automated, versioned backups are being operationally verified as part of the current infrastructure rollout.
+> **Verification status (November 2026):** encrypted, versioned backups of both storage pools have been verified end-to-end, including a full read-back integrity check and test restores. Durable audit-event persistence is being operationally verified.
 
 OmniBioAI does **not** describe these controls as HIPAA certification.
 
