@@ -38,9 +38,10 @@ Built for computational scientists, bioinformatics engineers, AI engineers, and 
 | Codebase | **3.0 M+** |
 | Automated tests | **65,000+** |
 | Microservices / platform services | **28+** |
-| Bioinformatics & AI/ML plugins | **500+** |
-| Workflow bundles | **1,000+** |
-| Execution / HPC / cloud tools | **12,000+** |
+| Bioinformatics & AI/ML plugins | **250+** |
+| Connetors/ Integrators | **200+**|
+| Workflow bundles | **350+** |
+| Execution / HPC / cloud tools | **3,000+** |
 | Container artifacts | **1,500+** |
 | PubMed corpus | **29M+ unique abstracts** |
 | Biomedical vector index | **75M+ vectors** |
