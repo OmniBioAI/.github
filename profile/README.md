@@ -44,7 +44,7 @@ Built for computational scientists, bioinformatics engineers, AI engineers, and 
 | Execution / HPC / cloud tools | **3,000+** |
 | Container artifacts | **1,500+** |
 | PubMed corpus | **29M+ unique abstracts** |
-| Biomedical vector index | **75M+ vectors** |
+| Biomedical vector index | **45M+ vectors** |
 
 > Public counts distinguish verified or usable platform resources from registry entries where appropriate.
 
