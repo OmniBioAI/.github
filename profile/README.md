@@ -307,6 +307,38 @@ This makes computational results easier to reproduce, inspect, trace, and audit.
 
 ---
 
+# 🏛️ Distributed Platform Architecture
+
+OmniBioAI is organized as a modular, multi-repository architecture in which platform capabilities are separated into independently developed components with defined responsibilities.
+
+The ecosystem currently comprises 43 repositories spanning eight engineering domains.
+
+| Architectural Domain | Core Components |
+|---|---|
+| AI & Agent Architecture | RAG, Model Registry, MCP, Skills, Workbench, Dev Hub |
+| Distributed Execution | TES, ToolServer, Tool Runtime, Workflow Bundles, HPC Policy |
+| Identity & Security | Authentication, API Gateway, IAM, Policy Engine, Security Audit |
+| Platform Control Plane | Control Center, Ecosystem, Regression Framework, CLI |
+| User Experience | Studio, Launcher, SDK, UI Components, Design System |
+| Scientific Data | LIMS, Reference Data, Runtime Artifacts |
+| Enterprise Services | Billing, Usage Metering, Database Initialization |
+| Engineering & Delivery | Documentation, Owner Runbooks, Tutorials, Development Infrastructure |
+
+## Architectural Separation
+
+The platform follows a separation-of-concerns approach:
+
+- **Experience Plane:** User-facing applications and developer interfaces.
+- **AI & Intelligence Plane:** Model integration, scientific reasoning, retrieval, agent orchestration, and knowledge services.
+- **Execution & Data Plane:** Workflow execution, scientific tools, computational environments, and biological data services.
+- **Governance & Control Plane:** Identity, policy enforcement, audit, observability, and platform operations.
+
+This separation supports modular development, independently testable components, controlled integration, and heterogeneous deployment environments.
+
+Repository boundaries represent engineering ownership and deployment boundaries where applicable; not every repository represents an independently deployed microservice.
+
+---
+
 # 🧠 AI Architecture & Engineering
 
 OmniBioAI is designed as an extensible, AI-native computational biology platform. Its architecture separates scientific reasoning, AI orchestration, workflow execution, infrastructure management, and evidence generation into independently managed platform capabilities.
