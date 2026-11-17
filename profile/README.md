@@ -307,6 +307,73 @@ This makes computational results easier to reproduce, inspect, trace, and audit.
 
 ---
 
+# 🧠 AI Architecture & Engineering
+
+OmniBioAI is designed as an extensible, AI-native computational biology platform. Its architecture separates scientific reasoning, AI orchestration, workflow execution, infrastructure management, and evidence generation into independently managed platform capabilities.
+
+The architecture is guided by five principles:
+
+- **Model independence:** AI workloads should not depend on a single LLM provider or inference runtime.
+- **Execution independence:** Scientific workflows should operate across local, HPC, containerized, and cloud environments.
+- **Scientific determinism:** AI reasoning assists analysis, while validated scientific tools remain responsible for deterministic computation.
+- **Evidence traceability:** AI-generated interpretations and computational outputs should retain links to their underlying evidence.
+- **Governed extensibility:** Plugins, services, agents, and integrations should operate through defined interfaces and authorization boundaries.
+
+## AI Model & Agent Architecture
+
+The AI layer supports a model-independent approach to scientific reasoning and tool execution.
+
+Architectural capabilities include:
+
+- Local and externally hosted LLM integration
+- Model selection and task-oriented routing
+- Agent orchestration and tool calling
+- MCP-based integration capabilities
+- Biomedical RAG and knowledge retrieval
+- Model benchmarking and evaluation
+- Human-in-the-loop scientific review
+
+## Scientific Knowledge Architecture
+
+The knowledge layer connects biomedical literature, vector retrieval, structured biological knowledge, and scientific context.
+
+Its architecture combines:
+
+- PubMed literature ingestion
+- PubMedBERT embeddings
+- FAISS vector indexing
+- Neo4j knowledge graph integration
+- Semantic retrieval
+- Evidence-aware retrieval and interpretation
+
+## Distributed Execution Architecture
+
+The execution architecture separates workflow definitions from computational infrastructure.
+
+Supported workflow technologies include Nextflow, WDL, Snakemake, and CWL.
+
+Execution environments include local workstations, Slurm/HPC, container runtimes, Kubernetes, and cloud batch services.
+
+## Platform Governance & Observability
+
+Platform services are designed around centralized identity, authorization, policy enforcement, auditability, and operational visibility.
+
+Architecture considerations include:
+
+- Service identity and authorization
+- Tenant-aware resource isolation
+- Plugin lifecycle management
+- Execution provenance
+- Model and service observability
+- Failure handling and recovery
+- Operational readiness and verification
+
+## Architectural Decision Records
+
+Important architecture decisions are documented to make the engineering rationale transparent, including model-serving strategies, vector-index design, plugin boundaries, workflow execution interfaces, and infrastructure deployment choices.
+
+---
+
 # 🔐 Security & Governance
 
 OmniBioAI is engineered around **zero-trust** and **least-privilege** principles for biomedical computational environments.
