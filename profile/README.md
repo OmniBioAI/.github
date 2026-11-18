@@ -104,7 +104,7 @@ This design separates active computational workloads from tenant storage, backup
 
 ## Hardware Infrastructure Architecture
 
-![OmniBioAI Hardware & Reference Infrastructure](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Hardware_Infrastructure_Overview_v2.png)
+![OmniBioAI Hardware & Reference Infrastructure](https://raw.githubusercontent.com/OmniBioAI/.github/main/profile/assets/OmniBioAI_Hardware_Infrastructure_Overview.png)
 
 ### Infrastructure Responsibilities
 
