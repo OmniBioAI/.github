@@ -69,7 +69,7 @@ This infrastructure supports software engineering, scientific computing, local A
 
 ## Centralized Storage Infrastructure
 
-**UGREEN NASync DXP4800 Plus – 4-bay NAS + 2× M.2 NVMe**
+**UGREEN NASync DXP4800 Plus – 40 GB RAM (8 GB onboard + 32 GB expansion) · 4-bay NAS + 2× M.2 NVMe**
 
 | Storage | Capacity | Designated Role |
 |---|---:|---|
