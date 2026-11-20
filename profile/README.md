@@ -164,8 +164,8 @@ OmniBioAI integrates biomedical literature and structured biological knowledge i
 
 Current infrastructure includes:
 
-- **28M+ unique PubMed abstracts**
-- **75M+ biomedical vectors**
+- **45M+ (29M+ unique) PubMed abstracts**
+- **45M+ biomedical vectors**
 - Domain-oriented biomedical indexes
 - Semantic retrieval
 - Evidence-linked RAG
